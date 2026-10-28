@@ -29,7 +29,15 @@
 					"name": "xls"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "dw_bronze_incidentes_sql",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
 			"transformations": [
 				{
 					"name": "select1"
@@ -120,7 +128,38 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select2",
 				"select1, sql union(byName: true)~> union1",
-				"union1, select2 union(byName: true)~> union2"
+				"union1, select2 union(byName: true)~> union2",
+				"union2 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          AnioFuente as string,",
+				"          IncidenteId as string,",
+				"          TipoIncidente as string,",
+				"          Severidad as string,",
+				"          FechaHoraInicio as string,",
+				"          FechaHoraFin as string,",
+				"          FechaHoraRegistro as string,",
+				"          VehiculoId as string,",
+				"          Descripcion as string",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          IncidenteId,",
+				"          TipoIncidente,",
+				"          Severidad,",
+				"          FechaHoraInicio,",
+				"          FechaHoraFin,",
+				"          FechaHoraRegistro,",
+				"          VehiculoId,",
+				"          Descripcion",
+				"     )) ~> sink1"
 			]
 		}
 	}
