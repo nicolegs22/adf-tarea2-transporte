@@ -49,8 +49,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "bronze",
-			"table": "Rutas"
+			"schema": "silver",
+			"table": "RutasAzure"
 		}
 	}
 }
