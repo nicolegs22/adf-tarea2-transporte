@@ -53,8 +53,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "bronze",
-			"table": "DemandaParadas"
+			"schema": "silver",
+			"table": "DemandaParadasAzure"
 		}
 	}
 }
