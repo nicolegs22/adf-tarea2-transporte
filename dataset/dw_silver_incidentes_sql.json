@@ -49,8 +49,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "bronze",
-			"table": "Incidentes"
+			"schema": "silver",
+			"table": "IncidentesAzure"
 		}
 	}
 }
