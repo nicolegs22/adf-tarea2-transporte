@@ -12,48 +12,50 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "AnioFuente",
-				"type": "varchar"
-			},
-			{
 				"name": "ViajeId",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "RutaHistoricaId",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "VehiculoId",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "FechaServicio",
-				"type": "varchar"
+				"type": "date"
 			},
 			{
 				"name": "HoraProgramada",
-				"type": "varchar"
+				"type": "time",
+				"scale": 7
 			},
 			{
 				"name": "HoraSalida",
-				"type": "varchar"
+				"type": "time",
+				"scale": 7
 			},
 			{
 				"name": "HoraLlegada",
-				"type": "varchar"
+				"type": "time",
+				"scale": 7
 			},
 			{
 				"name": "ValidacionesTarjeta",
-				"type": "varchar"
+				"type": "int",
+				"precision": 10
 			},
 			{
 				"name": "KmRecorridos",
-				"type": "varchar"
+				"type": "decimal",
+				"precision": 8,
+				"scale": 1
 			},
 			{
 				"name": "EstadoViaje",
-				"type": "varchar"
+				"type": "nvarchar"
 			}
 		],
 		"typeProperties": {

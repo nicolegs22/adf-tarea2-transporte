@@ -12,40 +12,36 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "AnioFuente",
-				"type": "varchar"
-			},
-			{
 				"name": "RutaHistoricaId",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "CodigoRuta",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "NombreRuta",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Origen",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Destino",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "VigenciaDesde",
-				"type": "varchar"
+				"type": "date"
 			},
 			{
 				"name": "VigenciaHasta",
-				"type": "varchar"
+				"type": "date"
 			},
 			{
 				"name": "Estado",
-				"type": "varchar"
+				"type": "nvarchar"
 			}
 		],
 		"typeProperties": {

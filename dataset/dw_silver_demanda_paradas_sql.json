@@ -12,44 +12,43 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "AnioFuente",
-				"type": "varchar"
-			},
-			{
 				"name": "DemandaId",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "FechaServicio",
-				"type": "varchar"
+				"type": "date"
 			},
 			{
 				"name": "RutaHistoricaId",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "ParadaHistoricaId",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Franja",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "ValidacionesTarjeta",
-				"type": "varchar"
+				"type": "int",
+				"precision": 10
 			},
 			{
 				"name": "Descensos",
-				"type": "varchar"
+				"type": "int",
+				"precision": 10
 			},
 			{
 				"name": "DemandaNoAtendida",
-				"type": "varchar"
+				"type": "int",
+				"precision": 10
 			},
 			{
 				"name": "Metodo",
-				"type": "varchar"
+				"type": "nvarchar"
 			}
 		],
 		"typeProperties": {

@@ -12,40 +12,39 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "AnioFuente",
-				"type": "varchar"
-			},
-			{
 				"name": "IncidenteId",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "TipoIncidente",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Severidad",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "FechaHoraInicio",
-				"type": "varchar"
+				"type": "datetime2",
+				"scale": 0
 			},
 			{
 				"name": "FechaHoraFin",
-				"type": "varchar"
+				"type": "datetime2",
+				"scale": 0
 			},
 			{
 				"name": "FechaHoraRegistro",
-				"type": "varchar"
+				"type": "datetime2",
+				"scale": 0
 			},
 			{
 				"name": "VehiculoId",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Descripcion",
-				"type": "varchar"
+				"type": "nvarchar"
 			}
 		],
 		"typeProperties": {
