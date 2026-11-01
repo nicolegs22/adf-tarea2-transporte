@@ -51,7 +51,7 @@
 				"          Placa = upper(trim(Placa)),",
 				"          TipoVehiculo = upper(trim(TipoVehiculo)),",
 				"          Estado = upper(trim(Estado))) ~> derivedColumn1",
-				"derivedColumn1 derive(CapacidadEfectiva = toInteger(trim(toString(CapacidadEfectiva))),",
+				"derivedColumn1 derive(CapacidadEfectiva = iifNull(toInteger(trim(toString(CapacidadEfectiva))), iif(TipoVehiculo == 'ARTICULADO', 80, 45)),",
 				"          VigenciaDesde = iif(instr(toString(VigenciaDesde), '/') > 0, toDate(toString(VigenciaDesde), 'dd/MM/yyyy'), toDate(toString(VigenciaDesde), 'yyyy-MM-dd')),",
 				"          VigenciaHasta = iif(instr(toString(VigenciaHasta), '/') > 0, toDate(toString(VigenciaHasta), 'dd/MM/yyyy'), toDate(toString(VigenciaHasta), 'yyyy-MM-dd'))) ~> derivedColumn2",
 				"derivedColumn2 sink(allowSchemaDrift: true,",

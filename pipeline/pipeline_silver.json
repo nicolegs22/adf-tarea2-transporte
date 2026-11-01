@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "df_silver_paradas",
+						"referenceName": "df_silver_vehiculos",
 						"type": "DataFlowReference"
 					},
 					"compute": {
@@ -109,7 +109,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "df_silver_viajes",
+						"referenceName": "df_silver_paradas",
 						"type": "DataFlowReference"
 					},
 					"compute": {
